@@ -15,4 +15,12 @@ if (choix === "mots") {
         }
     }
     console.log("Votre score est de: " + score + "sur" + listeMots.length)
-} 
+} else {
+    for(let i=0; i <listePhrases.length; i++){
+        let phraseUtilisateur = prompt("Entrez la phrase: " + listePhrases[i])
+        if(phraseUtilisateur === listePhrases[i]){
+            score++
+        }
+    }
+    console.log("Votre score est de: " + score + "sur" + listePhrases.length)
+}
