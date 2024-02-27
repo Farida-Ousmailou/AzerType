@@ -14,22 +14,28 @@ function choisirPhraseOuMots(){
 }
 function lancerBoucleDeJeu(listePropositions){
     let score = 0
+    for (let i = 0; i < listePropositions.length; i++) {
+        motUtilisateur = prompt("Entrez le mot: " + listeMots[i])
+        if (motUtilisateur === listePropositions[i]) {
+                score++
+         }
+     }
+        return score    
+ }
+
+function lancerJeu (){
+    let choix = choisirPhraseOuMots()
+    let score = 0
+    let nbMotsProposes = 0
+    
     if (choix === "mots") {
-        for (let i = 0; i < listeMots.length; i++) {
-            let motUtilisateur = prompt("Entrez le mot: " + listeMots[i])
-            if (motUtilisateur === listeMots[i]) {
-                console.log("Bravo, vous bien saisi le mot")
-                score++
-            }
-        }
-        return score
+        lancerBoucleDeJeu(listeMots)
+        nbMotsProposes = listeMots.length
     } else {
-        for(let i=0; i <listePhrases.length; i++){
-            let phraseUtilisateur = prompt("Entrez la phrase: " + listePhrases[i])
-            if(phraseUtilisateur === listePhrases[i]){
-                score++
-            }
-        }
-        return score
+        lancerBoucleDeJeu(listePhrases)
+        nbMotsProposes = listePhrases.length
     }
+    afficherResultat(score, nbMotsProposes)
 }
+
+lancerJeu()
