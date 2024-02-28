@@ -1,0 +1,23 @@
+body {
+    --color-primary: #f76c5e;
+    --color-secondary: #f68e5e;
+    --color-tertiary: #ffeee6;
+}
+h1 {
+   margin: 10px;
+   font-weight: bold;
+    color: var(--color-primary);
+}
+h2 {
+   margin: 10px;
+   font-weight: 500;
+    color: var(--color-secondary);
+}
+h3 {
+   margin: 10px;
+   font-weight: 400;
+    color: var(--color-tertiary);
+}
+input[type="radio"] {
+    filter: bluescale(100%);
+}
