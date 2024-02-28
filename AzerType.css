@@ -21,3 +21,31 @@ h3 {
 input[type="radio"] {
     filter: bluescale(100%);
 }
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+
+}
+button {
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--color-secondary);
+    background-color: white;
+}
+
+button:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    cursor: pointer;
+}
+```
+
+```html
