@@ -58,6 +58,7 @@ body {
     flex-direction:column;
     justify-content: space-between;
     align-items: center;
+    padding: 50px;
 }
 
 header {
@@ -77,4 +78,5 @@ main {
     text-align: center;
     color: white;  
     background-color: var(--color-tertiary);
+    border-radius: 100px;
 }
