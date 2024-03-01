@@ -78,7 +78,7 @@ main {
     text-align: center;
     color: white;  
     background-color: var(--color-tertiary);
-    border-radius: 100px;
+    border-radius: 70px;
 }
 
 footer {
@@ -91,3 +91,18 @@ footer {
     background-color: var(--color-tertiary);
     width: 100%;   
 }
+
+.optionErea {
+   margin : 20px;
+}
+
+.optionErea input[type = "radio"] {
+    margin-left: 40px;
+}
+
+.texteErea{
+    margin: 10px 0 10px 0;
+    font-weight: 600;
+    display: flex;
+    width: 100%;
+    }
