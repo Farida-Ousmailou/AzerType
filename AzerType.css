@@ -100,9 +100,22 @@ footer {
     margin-left: 40px;
 }
 
-.texteErea{
+.textErea{
     margin: 10px 0 10px 0;
     font-weight: 600;
     display: flex;
     width: 100%;
+    justify-content: center;
+    background-color: white;
+    color: var(--color-primary);
+    padding: 10px;
+    border-radius: 8px;
     }
+
+.entering {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    
+}
