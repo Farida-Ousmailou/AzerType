@@ -138,6 +138,17 @@ footer {
 @media screen and (max-width: 800px) {
     main {
         width: 80%;
+        padding: 30px;
+    }
+    .entering {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 900%;
         padding: 20px;
     }
     .entering {
