@@ -134,3 +134,14 @@ footer {
     justify-content: space-between;
     margin-bottom: 30px;
 }
+
+@media screen and (max-width: 800px) {
+    main {
+        width: 80%;
+        padding: 20px;
+    }
+    .entering {
+        flex-direction: column;
+    }
+    
+}
