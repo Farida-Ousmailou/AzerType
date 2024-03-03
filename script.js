@@ -10,13 +10,24 @@ function afficherResultat(score, nbMotsProposes){
     return console.log("Votre score est de: " + score + "sur" + nbMotsProposes.length)
 }
 
+function afficherProposition(proposition){
+   let textErea= document.querySelector(".textErea")
+    textErea.innerText = proposition
+}
+
+
+
 function lancerJeu (){
     let score = 0
     let nbMotsProposes = 0
+    let i = 0
     let inputtext= document.getElementById("texte")
     let buttonValider = document.getElementById("bouton")
+    afficherProposition(listeMots[i])
     buttonValider.addEventListener("click", function(){
         console.log(inputtext.value)
+        i++
+        afficherProposition(listeMots[i])
     })
 
     afficherResultat(score, nbMotsProposes)
@@ -26,7 +37,6 @@ lancerJeu()
 
 
 
-let textErea= document.querySelector(".textErea")
-console.log(textErea)
+
 let listBoutonRadio = document.querySelectorAll(".optionSource input")
 console.log(listBoutonRadio)
