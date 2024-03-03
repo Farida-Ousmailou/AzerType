@@ -27,7 +27,13 @@ function lancerJeu (){
     buttonValider.addEventListener("click", function(){
         console.log(inputtext.value)
         i++
-        afficherProposition(listeMots[i])
+        inputtext.value = ""
+        if (listeMots[i] === undefined){
+            afficherProposition("Fin du jeu")
+            inputtext.disabled = true
+        } else {
+            afficherProposition(listeMots[i])
+        }
     })
 
     afficherResultat(score, nbMotsProposes)
