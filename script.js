@@ -16,17 +16,19 @@ function afficherProposition(proposition){
 }
 
 
-
 function lancerJeu (){
     let score = 0
-    let nbMotsProposes = 0
     let i = 0
     let inputtext= document.getElementById("texte")
     let buttonValider = document.getElementById("bouton")
     afficherProposition(listeMots[i])
     buttonValider.addEventListener("click", function(){
         console.log(inputtext.value)
+        if (inputtext.value === listePhrases[i]){
+            score++
+        }   
         i++
+        afficherResultat(score, i)
         inputtext.value = ""
         if (listeMots[i] === undefined){
             afficherProposition("Fin du jeu")
@@ -42,7 +44,3 @@ function lancerJeu (){
 lancerJeu()
 
 
-
-
-let listBoutonRadio = document.querySelectorAll(".optionSource input")
-console.log(listBoutonRadio)
