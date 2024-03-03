@@ -1,3 +1,4 @@
+/*
 const listeMots= ["Cachalot", "Incroyable", "institution"]
 const listePhrases= ["Le cachalot est un mammifère marin", "C'est incroyable ce que tu as fait", "L'institution est un lieu de savoir"]
 
@@ -39,3 +40,16 @@ function lancerJeu (){
 }
 
 lancerJeu()
+*/
+
+let inputtext= document.getElementById("texte")
+let buttonValider = document.getElementById("bouton")
+console.log(inputtext)
+console.log(buttonValider)
+
+let textErea= document.querySelector(".textErea")
+console.log(textErea)
+let score = document.querySelector(".score span")
+console.log(score)
+let listBoutonRadio = document.querySelectorAll(".optionSource input")
+console.log(listBoutonRadio)
