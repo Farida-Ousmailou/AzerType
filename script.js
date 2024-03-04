@@ -43,7 +43,15 @@ function lancerJeu (){
     for (let index = 0; index < listesBtnRadio.length; index++) {
         listesBtnRadio[index].addEventListener("change", function(event){
             console.log(event.target.value)
+            if (event.target.value === "1"){
+            listePropositions = listeMots
+            listePropositions = listeMots
+        } else {
+            listePropositions = listePhrases
+        }
+        afficherProposition(listePropositions[i])
         })
+        
     }
 
 }
