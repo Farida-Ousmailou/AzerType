@@ -19,29 +19,30 @@ function afficherProposition(proposition){
 function lancerJeu (){
     let score = 0
     let i = 0
+    let listePropositions = listeMots
     let inputtext= document.getElementById("texte")
     let buttonValider = document.getElementById("bouton")
-    afficherProposition(listeMots[i])
+    afficherProposition(listePropositions[i])
     buttonValider.addEventListener("click", function(){
         console.log(inputtext.value)
-        if (inputtext.value === listePhrases[i]){
+        if (inputtext.value === listePropositions[i]){
             score++
         }   
         i++
         afficherResultat(score, i)
         inputtext.value = ""
-        if (listeMots[i] === undefined){
+        if (listePropositions[i] === undefined){
             afficherProposition("Fin du jeu")
             inputtext.disabled = true
         } else {
-            afficherProposition(listeMots[i])
+            afficherProposition(listePropositions[i])
         }
     })
 
     let listesBtnRadio= document.querySelectorAll(".optionSource input")
     for (let index = 0; index < listesBtnRadio.length; index++) {
-        listesBtnRadio[index].addEventListener("click", function(){
-            console.log(listesBtnRadio[index].value)
+        listesBtnRadio[index].addEventListener("change", function(event){
+            console.log(event.target.value)
         })
     }
 
