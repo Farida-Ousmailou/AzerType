@@ -37,7 +37,14 @@ function lancerJeu (){
             afficherProposition(listeMots[i])
         }
     })
-    
+
+    let listesBtnRadio= document.querySelectorAll(".optionSource input")
+    for (let index = 0; index < listesBtnRadio.length; index++) {
+        listesBtnRadio[index].addEventListener("click", function(){
+            console.log(listesBtnRadio[index].value)
+        })
+    }
+
 }
 
 lancerJeu()
