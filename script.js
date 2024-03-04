@@ -37,8 +37,7 @@ function lancerJeu (){
             afficherProposition(listeMots[i])
         }
     })
-
-    afficherResultat(score, nbMotsProposes)
+    
 }
 
 lancerJeu()
