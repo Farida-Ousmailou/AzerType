@@ -69,8 +69,11 @@ function lancerJeu (){
 
         let scoreEmail = `${score} / ${i}`
 
+        afficherEmail(email, email, score)
+
         console.log(nom, email)
     })
+    afficherResultat(score, i)
 }
 
 lancerJeu()
