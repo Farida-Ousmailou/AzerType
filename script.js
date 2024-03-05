@@ -15,12 +15,16 @@ function afficherProposition(proposition){
     textErea.innerText = proposition
 }
 
+function afficherEmail () {
+    let mailo = `mailto:${email}?subject=Votre score&body=Votre score est de ${score} / ${i}`
+    location.href = mailo
+}
 
 function lancerJeu (){
     let score = 0
     let i = 0
     let listePropositions = listeMots
-    let inputtext= document.getElementById("texte")
+    const inputtext= document.getElementById("texte")
     let buttonValider = document.getElementById("bouton")
     afficherProposition(listePropositions[i])
     buttonValider.addEventListener("click", function(){
@@ -53,11 +57,11 @@ function lancerJeu (){
         })
         
     }
-    let form = document.querySelector("form")
+    const form = document.querySelector("form")
     form.addEventListener("submit", function(event){
         event.preventDefault()
 
-        let baliseNom = document.getElementById("nom").
+        let baliseNom = document.getElementById("nom")
         let nom = baliseNom.value
 
         let baliseEmail = document.getElementById("email")
