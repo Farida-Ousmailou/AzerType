@@ -57,7 +57,15 @@ function lancerJeu (){
     form.addEventListener("submit", function(event){
         event.preventDefault()
 
-        
+        let baliseNom = document.getElementById("nom").
+        let nom = baliseNom.value
+
+        let baliseEmail = document.getElementById("email")
+        let email = baliseEmail.value
+
+        let scoreEmail = `${score} / ${i}`
+
+        console.log(nom, email)
     })
 }
 
