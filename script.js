@@ -53,7 +53,12 @@ function lancerJeu (){
         })
         
     }
+    let form = document.querySelector("form")
+    form.addEventListener("submit", function(event){
+        event.preventDefault()
 
+        
+    })
 }
 
 lancerJeu()
