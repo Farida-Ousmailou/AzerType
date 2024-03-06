@@ -96,6 +96,10 @@ function lancerJeu (){
     function verifierEmail(balise){
         let emailRegExp= new
     }
+    form.addEventListener("submit", function(event){
+        event.preventDefault()
+        verifierChamp(baliseNom)
+    })
 }
 
 lancerJeu()
