@@ -83,11 +83,13 @@ function lancerJeu (){
         }
     }
     function verifierEmail(balise) {
-        let emailRegExp= new
-        if (balise.value === "") {
-            balise.classList.add("error")
+        let emailRegExp= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
+        if (emailRegExp.test(balise.value) ){
+            console.log("Ok");
+            balise.classList.add("error");
         } else {
             balise.classList.add("error")
+            console.log("KO");
         }
     }
     form.addEventListener("submit", function(event){
