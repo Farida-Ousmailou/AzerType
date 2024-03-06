@@ -93,6 +93,9 @@ function lancerJeu (){
             return false
         }
     }
+    function verifierEmail(balise){
+        let emailRegExp= new
+    }
 }
 
 lancerJeu()
