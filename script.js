@@ -74,6 +74,16 @@ function lancerJeu (){
         console.log(nom, email)
     })
     afficherResultat(score, i)
+
+    function verifierChamp(balise) {
+        if (balise.value === "") {
+            balise.style.backgroundColor = "red"
+            return false
+        } else {
+            balise.style.backgroundColor = "white"
+            return true
+        }
+    }
 }
 
 lancerJeu()
