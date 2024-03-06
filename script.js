@@ -84,6 +84,15 @@ function lancerJeu (){
             return true
         }
     }
+    function verifierEmail(balise) {
+        if (balise.value.includes("@")) {
+            balise.style.backgroundColor = "white"
+            return true
+        } else {
+            balise.style.backgroundColor = "red"
+            return false
+        }
+    }
 }
 
 lancerJeu()
