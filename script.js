@@ -77,27 +77,25 @@ function lancerJeu (){
 
     function verifierChamp(balise) {
         if (balise.value === "") {
-            balise.style.backgroundColor = "red"
-            return false
+            balise.classList.add("error")
         } else {
-            balise.style.backgroundColor = "white"
-            return true
+            balise.classList.remove("error")
         }
     }
     function verifierEmail(balise) {
-        if (balise.value.includes("@")) {
-            balise.style.backgroundColor = "white"
-            return true
-        } else {
-            balise.style.backgroundColor = "red"
-            return false
-        }
-    }
-    function verifierEmail(balise){
         let emailRegExp= new
+        if (balise.value === "") {
+            balise.classList.add("error")
+        } else {
+            balise.classList.add("error")
+        }
     }
     form.addEventListener("submit", function(event){
         event.preventDefault()
+        verifierChamp(baliseNom)
+    })
+
+    baliseNom.addEventListener("change", function(){
         verifierChamp(baliseNom)
     })
 }
