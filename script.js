@@ -20,6 +20,23 @@ function afficherEmail () {
     location.href = mailo
 }
 
+function gererFormulaire() {
+    
+    let baliseNom = document.getElementById("nom")
+    let nom = baliseNom.value
+
+    let baliseEmail = document.getElementById("email")
+    let email = baliseEmail.value
+
+    if (ValiderNom(nom) && ValiderEmail(email)) {  
+        let scoreEmail = `${score} / ${i}`
+        afficherEmail(email, email, score)
+    } else {
+
+        console.log("Erreur")
+    }
+}
+
 function lancerJeu (){
     let score = 0
     let i = 0
