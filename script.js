@@ -20,7 +20,7 @@ function afficherEmail () {
     location.href = mailo
 }
 
-function gererFormulaire() {
+function gererFormulaire(scoreEmail) {
     
     let baliseNom = document.getElementById("nom")
     let nom = baliseNom.value
@@ -77,16 +77,8 @@ function lancerJeu (){
     const form = document.querySelector("form")
     form.addEventListener("submit", function(event){
         event.preventDefault()
-
-        let baliseNom = document.getElementById("nom")
-        let nom = baliseNom.value
-
-        let baliseEmail = document.getElementById("email")
-        let email = baliseEmail.value
-
         let scoreEmail = `${score} / ${i}`
-
-        afficherEmail(email, email, score)
+        gererFormulaire(scoreEmail)
 
         console.log(nom, email)
     })
