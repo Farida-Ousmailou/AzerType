@@ -54,12 +54,12 @@ function gererFormulaire(scoreEmail) {
         let baliseEmail = document.getElementById("email")
         let email = baliseEmail.value
 
-         (ValiderNom(nom) && ValiderEmail(email)) {  
-            let scoreEmail = `${score} / ${i}`
-            afficherEmail(email, email, score)
+        ValiderEmail(email)
+        afficherMessageErreur("")
+        afficherEmail(email, email, score)
+          
     } catch (error){
-
-        console.log("Erreur")
+        afficherMessageErreur(error.message)
     }
 }
 }
