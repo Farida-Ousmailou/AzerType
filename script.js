@@ -20,6 +20,13 @@ function afficherEmail () {
     location.href = mailo
 }
 
+function ValiderNom(nom) {
+    if (nom.length > 2) {
+        return true
+    }
+        return false
+}
+
 function gererFormulaire(scoreEmail) {
     
     let baliseNom = document.getElementById("nom")
