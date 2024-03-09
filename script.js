@@ -34,9 +34,15 @@ function ValiderEmail(email) {
 
 function afficherMessageErreur(message) {
     let baliseMessageErreur = document.getElementById(".partageScore")
-    let spanErreurMessage = document.createElement(".partageScore span")
-    spanErreurMessage.innerText = message
+    let spanErreurMessage = document.getElementById("erreurMessage")
+
+    if (spanErreurMessage) {
+    spanErreurMessage = document.createElement(".partageScore span")
+    spanErreurMessage.id = "erreurMessage"
+    
     partageScore.append(spanErreurMessage)
+    }
+    spanErreurMessage.innerText = message
 }
 
 
@@ -55,6 +61,7 @@ function gererFormulaire(scoreEmail) {
 
         console.log("Erreur")
     }
+}
 }
 
 function lancerJeu (){
