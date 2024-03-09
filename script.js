@@ -22,29 +22,27 @@ function afficherEmail () {
 
 function ValiderNom(nom) {
     if (nom.length > 2) {
-        return true
+        throw new Error("Le nom doit contenir au moins 2 caractères")
     }
-        return false
-}
+
 function ValiderEmail(email) {
     let emailRegExp= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
     if (emailRegExp.test(email) ){
-        return true
+        throw new Error("L'email n'est pas valide")
     }
-        return false
 }
 function gererFormulaire(scoreEmail) {
-    
-    let baliseNom = document.getElementById("nom")
-    let nom = baliseNom.value
+    try {
+        let baliseNom = document.getElementById("nom")
+        let nom = baliseNom.value
 
-    let baliseEmail = document.getElementById("email")
-    let email = baliseEmail.value
+        let baliseEmail = document.getElementById("email")
+        let email = baliseEmail.value
 
-    if (ValiderNom(nom) && ValiderEmail(email)) {  
-        let scoreEmail = `${score} / ${i}`
-        afficherEmail(email, email, score)
-    } else {
+         (ValiderNom(nom) && ValiderEmail(email)) {  
+            let scoreEmail = `${score} / ${i}`
+            afficherEmail(email, email, score)
+    } catch (error){
 
         console.log("Erreur")
     }
