@@ -31,6 +31,15 @@ function ValiderEmail(email) {
         throw new Error("L'email n'est pas valide")
     }
 }
+
+function afficherMessageErreur(message) {
+    let baliseMessageErreur = document.getElementById(".partageScore")
+    let spanErreurMessage = document.createElement(".partageScore span")
+    spanErreurMessage.innerText = message
+    partageScore.append(spanErreurMessage)
+}
+
+
 function gererFormulaire(scoreEmail) {
     try {
         let baliseNom = document.getElementById("nom")
