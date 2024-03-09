@@ -26,7 +26,13 @@ function ValiderNom(nom) {
     }
         return false
 }
-
+function ValiderEmail(email) {
+    let emailRegExp= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
+    if (emailRegExp.test(email) ){
+        return true
+    }
+        return false
+}
 function gererFormulaire(scoreEmail) {
     
     let baliseNom = document.getElementById("nom")
