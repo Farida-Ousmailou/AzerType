@@ -112,22 +112,4 @@ function lancerJeu (){
     afficherResultat(score, i)
 }
 
-    function verifierChamp(balise) {
-        if (balise.value === "") {
-            balise.classList.add("error")
-        } else {
-            balise.classList.remove("error")
-        }
-    }
-    form.addEventListener("submit", function(event){
-        event.preventDefault()
-        verifierChamp(baliseNom)
-    })
-
-    baliseNom.addEventListener("change", function(){
-        verifierChamp(baliseNom)
-    })
-    afficherResultat(score, i)
-}
-
 lancerJeu()
