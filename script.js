@@ -73,9 +73,8 @@ function lancerJeu (){
     let buttonValider = document.getElementById("bouton")
 
     afficherProposition(listePropositions[i])
-    
+
     buttonValider.addEventListener("click", function(){
-        console.log(inputtext.value)
         if (inputtext.value === listePropositions[i]){
             score++
         }   
@@ -93,9 +92,7 @@ function lancerJeu (){
     let listesBtnRadio= document.querySelectorAll(".optionSource input")
     for (let index = 0; index < listesBtnRadio.length; index++) {
         listesBtnRadio[index].addEventListener("change", function(event){
-            console.log(event.target.value)
             if (event.target.value === "1"){
-            listePropositions = listeMots
             listePropositions = listeMots
         } else {
             listePropositions = listePhrases
@@ -104,31 +101,22 @@ function lancerJeu (){
         })
         
     }
+
     const form = document.querySelector("form")
     form.addEventListener("submit", function(event){
         event.preventDefault()
         let scoreEmail = `${score} / ${i}`
         gererFormulaire(scoreEmail)
 
-        console.log(nom, email)
     })
     afficherResultat(score, i)
+}
 
     function verifierChamp(balise) {
         if (balise.value === "") {
             balise.classList.add("error")
         } else {
             balise.classList.remove("error")
-        }
-    }
-    function verifierEmail(balise) {
-        let emailRegExp= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
-        if (emailRegExp.test(balise.value) ){
-            console.log("Ok");
-            balise.classList.add("error");
-        } else {
-            balise.classList.add("error")
-            console.log("KO");
         }
     }
     form.addEventListener("submit", function(event){
