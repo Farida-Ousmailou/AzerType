@@ -7,7 +7,6 @@ function afficherResultat(score, nbMotsProposes){
     let spanScore = document.querySelector(".score span")
     let affichageResultat = `${score} / ${nbMotsProposes}`
     spanScore.innerText = affichageResultat
-    return console.log("Votre score est de: " + score + "sur" + nbMotsProposes.length)
 }
 
 function afficherProposition(proposition){
@@ -100,7 +99,7 @@ function lancerJeu (){
         afficherProposition(listePropositions[i])
         })
         
-    }
+}
 
     const form = document.querySelector("form")
     form.addEventListener("submit", function(event){
