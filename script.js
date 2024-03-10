@@ -11,7 +11,7 @@ function afficherResultat(score, nbMotsProposes){
 }
 
 function afficherProposition(proposition){
-   let textErea= document.querySelector(".textErea")
+   let textErea = document.querySelector(".textErea")
     textErea.innerText = proposition
 }
 
@@ -24,6 +24,7 @@ function ValiderNom(nom) {
     if (nom.length > 2) {
         throw new Error("Le nom doit contenir au moins 2 caractères")
     }
+}
 
 function ValiderEmail(email) {
     let emailRegExp= new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
@@ -33,7 +34,6 @@ function ValiderEmail(email) {
 }
 
 function afficherMessageErreur(message) {
-    let baliseMessageErreur = document.getElementById(".partageScore")
     let spanErreurMessage = document.getElementById("erreurMessage")
 
     if (spanErreurMessage) {
@@ -50,27 +50,30 @@ function gererFormulaire(scoreEmail) {
     try {
         let baliseNom = document.getElementById("nom")
         let nom = baliseNom.value
+        ValiderNom(nom)
 
         let baliseEmail = document.getElementById("email")
         let email = baliseEmail.value
 
         ValiderEmail(email)
         afficherMessageErreur("")
-        afficherEmail(email, email, score)
+        afficherEmail(nom, email, score)
           
     } catch (error){
-        afficherMessageErreur(error.message)
+        afficherMessageErreur(erreur.message)
     }
-}
 }
 
 function lancerJeu (){
     let score = 0
     let i = 0
     let listePropositions = listeMots
+
     const inputtext= document.getElementById("texte")
     let buttonValider = document.getElementById("bouton")
+
     afficherProposition(listePropositions[i])
+    
     buttonValider.addEventListener("click", function(){
         console.log(inputtext.value)
         if (inputtext.value === listePropositions[i]){
@@ -136,8 +139,7 @@ function lancerJeu (){
     baliseNom.addEventListener("change", function(){
         verifierChamp(baliseNom)
     })
+    afficherResultat(score, i)
 }
 
 lancerJeu()
-
-
