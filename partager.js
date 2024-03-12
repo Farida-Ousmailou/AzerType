@@ -12,6 +12,6 @@ function initAddEventListenerPartager() {
     btnPartage = document.querySelector(".zonePartager button")
     let partageScore = document.querySelector(".classScore")
     btnPartage.addEventListener("click", () => {
-        afficherPopup()
+        afficherPartage()
     })
 }
