@@ -7,4 +7,11 @@ function cacherPartage() {
     let popupBackground = document.querySelector(".classScore") 
     partageScore.classList.remove("active")
 }
-afficherPartage
+
+function initAddEventListenerPartager() {
+    btnPartage = document.querySelector(".zonePartager button")
+    let partageScore = document.querySelector(".classScore")
+    btnPartage.addEventListener("click", () => {
+        afficherPopup()
+    })
+}
