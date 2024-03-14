@@ -14,4 +14,10 @@ function initAddEventListenerPartager() {
     btnPartage.addEventListener("click", () => {
         afficherPartage()
     })
+
+        partageScore.addEventListener("click", (event) => {
+            if (event.target === partageScore) {
+                cacherPartage()
+        }
+     })
 }
